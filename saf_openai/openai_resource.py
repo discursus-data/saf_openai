@@ -1,4 +1,4 @@
-from dagster import resource
+from dagster import resource, StringSource
 import openai
 
 class OpenAIResource:
@@ -18,8 +18,13 @@ class OpenAIResource:
         return response['choices'][0]['text']
 
 
-@resource(description="A OpenAI resource.")
+@resource(
+    config_schema={
+        "openai_api_key": StringSource
+    },
+    description="A OpenAI resource."
+)
 def initiate_openai_resource(context):
     return OpenAIResource(
-        openai_api_key = context.resource_config["resources"]["openai_resource"]["config"]["openai_api_key"]
+        openai_api_key = context.resource_config["openai_api_key"]
     )
