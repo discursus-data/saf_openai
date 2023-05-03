@@ -40,10 +40,10 @@ my_openai = openai_resource.initiate_openai_resource.configured(novacene_configs
 Creates a completion for the provided prompt and parameters.
 
 Parameters:
-- model (required): ID of the model to use.
-- prompt (Defaults to <|endoftext|>): The prompt(s) to generate completions for, encoded as a string, array of strings, array of tokens, or array of token arrays.
-- max_tokens (Defaults to 16): The maximum number of tokens to generate in the completion.
-- temperature (Defaults to 1): What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.
+- model: ID of the model to use.
+- prompt: The prompt(s) to generate completions for, encoded as a string, array of strings, array of tokens, or array of token arrays.
+- max_tokens: The maximum number of tokens to generate in the completion.
+- temperature: What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.
 
 Returns:
 - completion_str: Completion's text

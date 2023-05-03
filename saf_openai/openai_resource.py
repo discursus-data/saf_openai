@@ -6,7 +6,7 @@ class OpenAIResource:
         openai.api_key = openai_api_key
     
 
-    def completion(self, model, prompt, max_tokens, temperature):
+    def completion(self, model, prompt, max_tokens=16, temperature=1):
         # Generate text using the OpenAI API
         response = openai.Completion.create(
             model=model,
