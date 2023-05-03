@@ -29,7 +29,7 @@ class OpenAIResource:
             max_tokens=max_tokens,
             temperature=temperature,
         )
-        return response['choices'][0]['content']
+        return response.choices[0].message.content
 
 
 @resource(
