@@ -15,7 +15,7 @@ Here's an example of a config file:
 
 ```
 resources:
-  novacene_resource:
+  openai_resource:
     config:
       openai_api_key: 
         env: OPENAI_API_KEY
@@ -33,7 +33,7 @@ Example:
 ```
 openai_configs = config_from_files(['configs/openai_configs.yaml'])
 
-my_openai = openai_resource.initiate_openai_resource.configured(novacene_configs)()
+my_openai = openai_resource.initiate_openai_resource.configured(openai_configs)()
 ```
 
 ## openai_resource.completion
