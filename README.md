@@ -53,9 +53,26 @@ Example:
 completion_str = context.resources.openai_resource.completion(model='gpt-3.5-turbo', prompt='Wazup', max_tokens=1024, temperature=0.5)
 ```
 
+## openai_resource.chat_completion
+Creates a completion using a chat model for the provided prompt and parameters.
+
+Parameters:
+- model: ID of the model to use.
+- prompt: The prompt(s) to generate completions for, encoded as a string, array of strings, array of tokens, or array of token arrays.
+- max_tokens: The maximum number of tokens to generate in the completion.
+- temperature: What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.
+
+Returns:
+- completion_str: Completion's text
+
+Example:
+```
+completion_str = context.resources.openai_resource.chat_completion(model='gpt-3.5-turbo', prompt='Wazup', max_tokens=1024, temperature=0.5)
+```
+
 &nbsp;
 
-## Development instructions
+# Development instructions
 - Update poetry: `sudo poetry self update`
 - Update the dependancies: `sudo poetry update`
 - Install dependencies on virtual environment: `poetry install`
