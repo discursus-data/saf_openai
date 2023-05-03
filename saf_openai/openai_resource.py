@@ -20,7 +20,7 @@ class OpenAIResource:
 
     def chat_completion(self, model, prompt, max_tokens=16, temperature=1):
         openai.api_key = self._openai_api_key
-        # Generate text using the OpenAI API
+        # Generate text using th
         response = openai.ChatCompletion.create(
             model=model,
             messages=[
