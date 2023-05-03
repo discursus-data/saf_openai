@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "saf-openai"
+version = "0.1.0"
+description = "OpenAI resource library for the Social Analytics Framework."
+authors = ["Olivier Dupuis <odupuis@lantrns.co>"]
+license = "MIT"
+packages = [{include = "saf_openai"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+openai = "^0.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
