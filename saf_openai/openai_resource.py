@@ -26,7 +26,6 @@ class OpenAIResource:
             messages=[
                 {"role": "user", "content": prompt}
             ],
-            prompt=prompt,
             max_tokens=max_tokens,
             temperature=temperature,
         )
